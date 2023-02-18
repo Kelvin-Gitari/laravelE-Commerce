@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title') Gainloe @endsection
+@section('title') KElvin Site @endsection
 @section('keywords') Home,About,Contact,Car @endsection
 @section('description') Write some descripton about the webpage @endsection
 @section('content')
@@ -11,7 +11,7 @@
       {{ session('status') }}
   </div>
   @endif
-  
+
 
 </div>
 
@@ -36,5 +36,5 @@
     </script>
  @endif
 
-  
+
 @endsection

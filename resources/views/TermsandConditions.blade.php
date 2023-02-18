@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title') Gainloe @endsection
+@section('title') Kelvin Site @endsection
 @section('keywords') Home,About,Contact,Car @endsection
 @section('description') Write some descripton about the webpage @endsection
 @section('content')
@@ -7,18 +7,18 @@
 <h3  class="black-text" style="font-weight:bold;">
 Terms and Conditions</h3>
 <p class="white-text" style="font-weight:bold;"> Please Read All the Terms and Conditions</p>
-  
+
 
 </div>
 
- 
+
 
 <div class="container py-5">
-    
+
 <h3  style="font-weight:bold;">OVERVIEW</h3>
     <p>
         <strong>
-            This website is operated by Gainaloe. Throughout the site, the terms “we”, “us” and “our” refer to Gainaloe. Gainaloe offers this website, including all information, tools and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.
+            This website is operated by Kelvin . Throughout the site, the terms “we”, “us” and “our” refer to Kelvin. Kelvin Site offers this website, including all information, tools and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.
 <br><br>
 By visiting our site and/ or purchasing something from us, you engage in our “Service” and agree to be bound by the following terms and conditions (“Terms of Service”, “Terms”), including those additional terms and conditions and policies referenced herein and/or available by hyperlink. These Terms of Service apply  to all users of the site, including without limitation users who are browsers, vendors, customers, merchants, and/ or contributors of content.<br><br>
 
@@ -29,7 +29,7 @@ Any new features or tools which are added to the current store shall also be sub
 </p>
 
 <h3  style="font-weight:bold;">SECTION 1 - ONLINE STORE TERMS</h3>
-<p> 
+<p>
 <strong>
     By agreeing to these Terms of Service, you represent that you are at least the age of majority in your state or province of residence, or that you are the age of majority in your state or province of residence and you have given us your consent to allow any of your minor dependents to use this site.
 <br><br>
@@ -57,7 +57,7 @@ The headings used in this agreement are included for convenience only and will n
 <h3  style="font-weight:bold;">SECTION 3 - ACCURACY, COMPLETENESS AND TIMELINESS OF INFORMATION</h3>
 <p>
     <strong>
-    
+
 We are not responsible if information made available on this site is not accurate, complete or current. The material on this site is provided for general information only and should not be relied upon or used as the sole basis for making decisions without consulting primary, more accurate, more complete or more timely sources of information. Any reliance on the material on this site is at your own risk.<br><br>
 This site may contain certain historical information. Historical information, necessarily, is not current and is provided for your reference only. We reserve the right to modify the contents of this site at any time, but we have no obligation to update any information on our site. You agree that it is your responsibility to monitor changes to our site.
 </strong>
@@ -154,16 +154,16 @@ We undertake no obligation to update, amend or clarify information in the Servic
 
 <h3  style="font-weight:bold;">SECTION 12 - PROHIBITED USES</h3>
 <p><strong>
-In addition to other prohibitions as set forth in the Terms of Service, you are prohibited from using the site or its content: 
-(a) for any unlawful purpose; 
-(b) to solicit others to perform or participate in any unlawful acts; 
+In addition to other prohibitions as set forth in the Terms of Service, you are prohibited from using the site or its content:
+(a) for any unlawful purpose;
+(b) to solicit others to perform or participate in any unlawful acts;
 (c) to violate any international, federal, provincial or state regulations, rules, laws, or local ordinances;
 (d) to infringe upon or violate our intellectual property rights or the intellectual property rights of others;
-(e) to harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate based on gender, sexual orientation, religion, ethnicity, race, age, national origin, or disability; 
-(f) to submit false or misleading information; 
-(g) to upload or transmit viruses or any other type of malicious code that will or may be used in any way that will affect the functionality or operation of the Service or of any related website, other websites, or the Internet; 
-(h) to collect or track the personal information of others; 
-(i) to spam, phish, pharm, pretext, spider, crawl, or scrape; 
+(e) to harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate based on gender, sexual orientation, religion, ethnicity, race, age, national origin, or disability;
+(f) to submit false or misleading information;
+(g) to upload or transmit viruses or any other type of malicious code that will or may be used in any way that will affect the functionality or operation of the Service or of any related website, other websites, or the Internet;
+(h) to collect or track the personal information of others;
+(i) to spam, phish, pharm, pretext, spider, crawl, or scrape;
 (j) for any obscene or immoral purpose; or
 (k) to interfere with or circumvent the security features of the Service or any related website, other websites, or the Internet. We reserve the right to terminate your use of the Service or any related website for violating any of the prohibited uses.
 </strong></p>
@@ -244,7 +244,7 @@ We reserve the right, at our sole discretion, to update, change or replace any p
 <h3  style="font-weight:bold;">SECTION 20 - CONTACT INFORMATION</h3>
 <p>
     <strong>
-Questions about the Terms of Service should be sent to us at contact@gainaloe.com
+Questions about the Terms of Service should be sent to us at kkinyua020@gmail.com
 </strong>
 </p>
 </div>

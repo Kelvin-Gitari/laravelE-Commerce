@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title') Gainloe @endsection
+@section('title') Kelvin Site @endsection
 @section('keywords') Home,About,Contact,Car @endsection
 @section('description') Write some descripton about the webpage @endsection
 @section('content')
@@ -11,14 +11,14 @@
       {{ session('status') }}
   </div>
   @endif
-  
+
 
 </div>
 
- 
+
 
 <div class="container py-2">
-   
+
    <p align="center">
         <img src="{{asset('Img/admin_image.png')}}" class="img-fluid" style="width:70px;" >
    </p>
@@ -65,7 +65,7 @@
                 </div>
             </div>
         </div>
-        
+
          <div class="col-xl-12 col-md-6">
             <div class="card bg-warning       mb-4">
                 <div class="card-body">   News Letter Subscription Data</div>

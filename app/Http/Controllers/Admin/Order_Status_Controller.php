@@ -6,12 +6,13 @@ namespace App\Http\Controllers\Admin;
     use App\Models\Products;
     use Illuminate\Support\Facades\Cookie;
     use Session;
-    use Illuminate\Support\Facades\Validator;
+    use Illuminate\Support\Facades\Mail;
     use App\Models\Coupen_Code;
     use App\Models\Order;
     use Illuminate\Support\Facades\Auth;
-    use Mail;
+    // use Mail;
     use App\User;
+   
 
 class Order_Status_Controller extends Controller
 {
@@ -26,7 +27,7 @@ class Order_Status_Controller extends Controller
         ->with('paymentmode', $Order_Status->paymentmode)
         ->with('Order_Cancel_Status', $Order_Status->Order_Cancel_Status);
     }
-    
+
      public function Update_Shipping_Status(Request $request)
      {
          $id=$request->input('Order_id') ;
@@ -37,9 +38,9 @@ class Order_Status_Controller extends Controller
 
        # $Orders->D_Status_Updated_By=$Auth->email;
         $Orders->update();
-        
-        
-       
+
+
+
         /* Email Alert Starts Here*/
          $email=$Orders->Customer_Emailid;
          $Order_Details=$Orders->Order_Details;
@@ -50,9 +51,9 @@ class Order_Status_Controller extends Controller
                             $User=User::where('email','=',$email)->first();
                             $loginid=$email;
                             $name=$User->name;
-                            
+
         	                $welcomemessage='Hello '.$name.'';
-        	                $emailbody='<p>Your Order has been Shipped. Your estimated delivery date is 3-5 working days. If you would like to view the status of your order or make any changes to it, please visit Your Orders on <a href="https://www.gainaloe.com">Gainaloe.com</a></p><br>
+        	                $emailbody='<p>Your Order has been Shipped. Your estimated delivery date is 3-5 working days. If you would like to view the status of your order or make any changes to it, please visit Your Orders on <a href="https://www.facebook.com/Vin Main">Kelvin Site</a></p><br>
         	                <h4>Order Details: </h4><p> Order No:'.$id.$Order_Details.'</p>
         	                 <p><strong>Delivery Address:</strong>
         	               '.$Delivery_Address.'</p>
@@ -63,34 +64,34 @@ class Order_Status_Controller extends Controller
         	                $emailcontent=array(
         	                    'WelcomeMessage'=>$welcomemessage,
         	                    'emailBody'=>$emailbody
-        	                   
+
         	                    );
         	                    Mail::send(array('html' => 'emails.order_email'), $emailcontent, function($message) use
         	                    ($loginid, $name,$id)
         	                    {
         	                        $message->to($loginid, $name)->subject
-        	                        (' Your Gainaloe.com order '.$id.' is Shipped');
-        	                        $message->from('codetalentum@btao.in','Gainaloe');
-        	                        
+        	                        (' Your Kelvin Site order '.$id.' is Shipped');
+        	                        $message->from('kkinyua020@gmail.com','Kelvin');
+
         	                    });
            /* Email Alert Ends Here*/
         return redirect()->back()->with('status','Shipping Status Updated Succesfully');
 
      }
-     
+
      public function Update_Delivery_Status(Request $request)
      {
          $id=$request->input('Order_id') ;
         $Orders=Order::find($id);
-        date_default_timezone_set("Asia/Calcutta");   //India time (GMT+5:30)
-         
+        date_default_timezone_set("Africa/Nairobi");   //African time (GMT+5:30)
+
         $Delivery_Status =  date('d-m-Y h:i:s');
         $Orders->Delivery_Status=$Delivery_Status;
       #  $Auth = Auth::user();
 
        # $Orders->D_Status_Updated_By=$Auth->email;
         $Orders->update();
-        
+
         /* Email Alert Starts Here*/
          $email=$Orders->Customer_Emailid;
          $Order_Details=$Orders->Order_Details;
@@ -101,7 +102,7 @@ class Order_Status_Controller extends Controller
                             $User=User::where('email','=',$email)->first();
                             $loginid=$email;
                             $name=$User->name;
-                            
+
         	                $welcomemessage='Hello '.$name.'';
         	                $emailbody='<p>Your Order has been delivered!<br>  </p>
         	                <h4>Your Feed Back Matters a Lot! </h4>
@@ -111,15 +112,15 @@ class Order_Status_Controller extends Controller
         	                $emailcontent=array(
         	                    'WelcomeMessage'=>$welcomemessage,
         	                    'emailBody'=>$emailbody
-        	                   
+
         	                    );
         	                    Mail::send(array('html' => 'emails.order_email'), $emailcontent, function($message) use
         	                    ($loginid, $name,$id)
         	                    {
         	                        $message->to($loginid, $name)->subject
-        	                        ('Your Gainaloe.com order '.$id.' is Delivered');
-        	                        $message->from('codetalentum@btao.in','Gainaloe');
-        	                        
+        	                        ('Your Kelvin Site order '.$id.' is Delivered');
+        	                        $message->from('kkinyua020@gmail.com','Kelvin');
+
         	                    });
            /* Email Alert Ends Here*/
         return redirect()->back()->with('status','Delivery  Status Updated Succesfully');
@@ -152,16 +153,16 @@ class Order_Status_Controller extends Controller
 
      }
      public function Order_Cancel(Request $request,$id)
-     { 
+     {
         $Orders=Order::find($id);
-        date_default_timezone_set("Asia/Calcutta");   //India time (GMT+5:30)
-         
+        date_default_timezone_set("Africa/Nairobi");   //India time (GMT+5:30)
+
         $Order_Cancelled_On =  date('d-m-Y h:i:s');
         $Orders->Order_Cancel_Status=1;
         $Orders->Order_Cancelled_On=$Order_Cancelled_On;
-      
-        
-        
+
+
+
       #  $Auth = Auth::user();
 
        # $Orders->D_Status_Updated_By=$Auth->email;
@@ -176,9 +177,9 @@ class Order_Status_Controller extends Controller
                             $User=User::where('email','=',$email)->first();
                             $loginid=$email;
                             $name=$User->name;
-                            
+
         	                $welcomemessage='Hello '.$name.'';
-        	                $emailbody='<p>Your Order Was Cancelled Successfully on '.$Order_Cancelled_On.'<br> 
+        	                $emailbody='<p>Your Order Was Cancelled Successfully on '.$Order_Cancelled_On.'<br>
         	                As per Your Request, we have cancelled your Order. If you paid any payment with us, it will be refunded within 2-3 Working Days...</p>
         	                <h4>Order Details: </h4><p> Order No:'.$id.$Order_Details.'</p>
         	                 <p><strong>Delivery Address:</strong>
@@ -190,32 +191,32 @@ class Order_Status_Controller extends Controller
         	                $emailcontent=array(
         	                    'WelcomeMessage'=>$welcomemessage,
         	                    'emailBody'=>$emailbody
-        	                   
+
         	                    );
         	                    Mail::send(array('html' => 'emails.order_email'), $emailcontent, function($message) use
         	                    ($loginid, $name,$id)
         	                    {
         	                        $message->to($loginid, $name)->subject
-        	                        ('Your Gainaloe.com order '.$id.' is Cancelled');
-        	                        $message->from('codetalentum@btao.in','Gainaloe');
-        	                        
+        	                        ('Your Kelvin Site order '.$id.' is Cancelled');
+        	                        $message->from('kkinyua020@gmail.com','Kelvin');
+
         	                    });
            /* Email Alert Ends Here*/
-        
+
         return redirect()->back()->with('status','Order Cancelled Succesfully');
 
      }
       public function Order_Re_Cancel(Request $request,$id)
-     { 
+     {
         $Orders=Order::find($id);
-        date_default_timezone_set("Asia/Calcutta");   //India time (GMT+5:30)
-         
+        date_default_timezone_set("Africa/Nairobi");   //India time (GMT+5:30)
+
         $Order_Cancelled_On =  date('d-m-Y h:i:s');
         $Orders->Order_Cancel_Status=0;
         $Orders->Order_Cancelled_On=NULL;
-      
-        
-        
+
+
+
       #  $Auth = Auth::user();
 
        # $Orders->D_Status_Updated_By=$Auth->email;
@@ -223,8 +224,8 @@ class Order_Status_Controller extends Controller
         return redirect()->back()->with('status','Order Re Cancelled Succesfully');
 
      }
-     
-     
-     
-     
+
+
+
+
 }

@@ -1,18 +1,18 @@
 @extends('layout')
-@section('title') Gainloe @endsection
+@section('title') Kelvin Site @endsection
 @section('keywords') Home,About,Contact,Car @endsection
 @section('description') Write some descripton about the webpage @endsection
 @section('content')
  <style>
      @media (max-width: 768px)
-    { 
+    {
       #profileimage
       {
           width:60%;
       }
     }
       @media (min-width: 768px)
-    { 
+    {
       #profileimage
       {
           width:100%;
@@ -21,11 +21,11 @@
  </style>
 
 <div class="px-5 py-2" style="background:#1CD5E8;margin-top:5px;" >
-      
+
 
  <h5 class="my-3"> <span class="fas fa-bars fa-1x" style="font-size:20px;cursor:pointer;color:black;" onclick="openNav()"></span> <a href="/" class="black-text">Home></a> <strong class="black-text"> <a href="" class="black-text" >Dashboard </a> </strong> </h5>
-            
-    
+
+
 </div>  <br><br>
 
 <div id="mySidenav" class="sidenav">
@@ -51,7 +51,7 @@ function closeNav() {
 }
 </script>
 
- 
+
                  <!-- Home Section Starts Here-->
                             <div class="container">
                                 <div class="row">
@@ -92,7 +92,7 @@ function closeNav() {
 
                                             <li style="float:left;"><strong>Alternative Mobile No: </strong>{{Auth::user()->alternativemno}}
                                             <a href="{{url('profile')}}" class="btaobtn btaobtn-outline-dark p-2">Edit</a></li>
-                                            
+
                                         </ul>
 
 
@@ -103,20 +103,20 @@ function closeNav() {
 
                                     </div>
                                     <div align="center" class="col-md-12">
-                                         <a href="{{url('cart')}}"  class="btaobn btaobtn-outline-danger px-3 py-3 mx-3"  >  
+                                         <a href="{{url('cart')}}"  class="btaobn btaobtn-outline-danger px-3 py-3 mx-3"  >
                                              <i class="fas fa-shopping-cart"  ></i>
                                             <span class="basket-item-count"  >
                                               <span class="badge badge-pill red"> {{ count((array) session('cart')) }}  </span>
-                                              </span> 
+                                              </span>
                                               <span style="font-size:20px;">Go to Cart<i class="fas fa-long-arrow-alt-right  mx-1"></i>
-                                              </span> 
-                                              </a> 
+                                              </span>
+                                              </a>
                                     </div>
                                 </div>
-   
+
                        </div>
                        <br>
 
                     <!-- Home Section Ends Here-->
-  
+
 @endsection

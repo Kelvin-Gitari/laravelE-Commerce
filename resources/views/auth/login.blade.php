@@ -1,10 +1,10 @@
 @extends('layouts.app')
 @section('title')
-Login - Gainloe
+Login - Kelvin Site
 @endsection
 
 @section('keywords')
-Login in Gainloe, signin
+Login in KElvin Site, signin
 
 @endsection
 
@@ -15,12 +15,12 @@ Login  and  book your  products
 
 
 @section('content')
- 
+
 <div align="center" class="container-fluid my-3 animated bounceIn">
 
     <div class="col-md-2">
         <a href="/">
-            <img src="{{asset('assets/img/Logo-Square.webp')}}" class="img-fluid px-2 py-2" style="width:200px;">
+            <img src="{{asset('assets/img/')}}" class="img-fluid px-2 py-2" style="width:200px;">
         </a>
     </div>
    <h5 class="my-2" >Login</h5>
@@ -72,7 +72,7 @@ Login  and  book your  products
                                     <button type="submit" class="btaobtn btaobtn-dark px-5 py-2">
                                         {{ __('Login') }}
                                     </button>
-                                        
+
                                         @if (Route::has('password.request'))
                                             <a class="btn btn-link col-md-12" href="{{ route('password.request') }}">
                                                 {{ __('Forgot Your Password?') }}
@@ -81,12 +81,12 @@ Login  and  book your  products
                                  <strong>Not Having an Account! <br>Then <a href="register" ><u>Create a New Account</u></a></strong>
                                 </div>
                                  <div class="col-md-12 ">
-                                   <p class="my-2"> 
+                                   <p class="my-2">
                                           <a class="black-text" href="/">
                                                <i class="fas fa-arrow-left"></i>
-                                           <u>Back to Gainloe</u>
+                                           <u>Back to Kelvin Site</u>
                                            </a>
-                                   </p> 
+                                   </p>
                                  </div>
                             </div>
                         </form>

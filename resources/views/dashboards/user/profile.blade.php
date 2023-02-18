@@ -1,28 +1,28 @@
 @extends('layout')
-@section('title') Gainloe @endsection
+@section('title') Kelvin Site @endsection
 @section('keywords') Home,About,Contact,Car @endsection
 @section('description') Write some descripton about the webpage @endsection
 @section('content')
- 
+
    @if ($errors->any())
           <script>
         $(document).ready(function () {
-    
+
       $('#centralModalfailure').modal('show');
-    
+
       });
       </script>
-   
+
 @endif
   @if (session('passwordwontmatch'))
     <script>
     $(document).ready(function () {
            alertify.set('notifier','position','top-right');
-                
-  
+
+
                 alertify.alert("Warning","Password Wont Match");
           });
-          
+
     </script>
 @endif
    @if (session('successstatus'))
@@ -37,11 +37,11 @@
 @endif
 
 <div class="px-5 py-2" style="background:#1CD5E8;margin-top:5px; ">
-      
+
 
  <p class="my-2"> <span class="fas fa-bars fa-1x" style="font-size:20px;cursor:pointer;color:black;" onclick="openNav()"></span> <a href="/" class="black-text">Home></a><a href="{{url('dashboard')}}" class="black-text">Dashboard></a> <strong class="black-text"> <a href="" class="black-text" >Profile </a> </strong> </p>
-            
-    
+
+
 </div>
 <div id="mySidenav" class="sidenav">
     <br><br>
@@ -65,15 +65,15 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
 </script>
- 
-    
+
+
 <div class="container px-5">
-       
+
     <h3 class="py-2  ">My Profile</h3>
                <div class="row ">
-   
+
                <div class="col-md-12">
-               
+
                             <p>Account Created On:  {{Auth::user()->created_at}}</p>
                             @if (session('status'))
                             <div class="alert alert-success" role="alert">
@@ -85,11 +85,11 @@ function closeNav() {
                                    <div class="card">
                                        <div class="card-body">
                                                    <div class="row">
-                   
+
                                                        <div class="col-md-4">
                                                            <div class="form-group">
                                                            <label> Name</label>
-                                                           <input type="text" value="{{Auth::user()->name}}" class="form-control" name="name"> 
+                                                           <input type="text" value="{{Auth::user()->name}}" class="form-control" name="name">
                                                            </div>
                                                        </div>
                                                        <div class="col-md-4">
@@ -101,31 +101,31 @@ function closeNav() {
                                                        <div class="col-md-3">
                                                            @if(Auth::user()->image=='')
                                                            <img src="https://www.lentoprints.com/public/images/user.webp"  alt="User Image"  class="rounded-circle mx-5" style="width:50%">
-                   
+
                                                            @else
                                                                <img src="{{asset('Uploads/profiles/'.Auth::user()->image.'')}}"  alt="{{Auth::user()->image}}"  class="img-fluid mx-5" style="width:50%">
                                                            @endif
                                                            <input type="file" name="image" class="px-5">
                                                        </div>
                                                        <div class="col-md-12 py-2">
-                                                           
+
                                                            <div class="form-group">
-                                                                <button type="submit" class="btn btn-success btn-lg"> Update    </button>    
+                                                                <button type="submit" class="btn btn-success btn-lg"> Update    </button>
                                                                    <a  data-toggle="modal" data-target="#openpasswordmodel"    class="btaobtn btaobtn-outline-dark btaobtn-lg px-2 py-2"> Change Password    </a>
                                                            </div>
                                                        </div>
                                                    </div>
                                        </div>
                                   </div>
-                                  
-          
+
+
     <h3 class="py-3">Delivery Address</h3>
                                    <div class="card">
-                                       
+
                                        <div class="card-body">
                                                    <div class="row "  >
                                                        <div class="col-md-12">
-                                                        
+
                                                        </div>
                                                        <div class="col-md-6">
                                                            <div class="form-group">
@@ -133,7 +133,7 @@ function closeNav() {
                                                            <input type="text" value="{{Auth::user()->address1}}" name="address1" class="form-control">
                                                            </div>
                                                        </div>
-                           
+
                                                        <div class="col-md-4">
                                                            <div class="form-group">
                                                             <label> Address2 ( LandMark/Nearby )</label>
@@ -172,15 +172,15 @@ function closeNav() {
                                                            <input type="text" value="{{Auth::user()->mnumber}}" name="mno" class="form-control">
                                                            </div>
                                                        </div>
-                           
+
                                                        <div class="col-md-4">
                                                            <div class="form-group">
                                                             <label>Alternative Mobile No</label>
                                                            <input type="text" value="{{Auth::user()->alternativemno}}"   name="alternativemno" class="form-control">
                                                            </div>
                                                        </div>
-                           
-                           
+
+
                                                        <div class="col-md-12">
                                                            <div class="form-group">
                                                                    <button type="submit" class="btn btn-success btn-lg"> Update    </button>
@@ -190,10 +190,10 @@ function closeNav() {
                                        </div>
                                     </div>
                            </form>
-                       
+
                </div>
            </div>
-   
+
        </div>
     <br>
 
@@ -236,7 +236,7 @@ function closeNav() {
          <ul align="left"  >
                 @if($errors->any())
                    @foreach ($errors->all() as $error)
-                        
+
                              <li  class="text-danger">{{ $error }}</li>
                     @endforeach
                 @endif
@@ -250,7 +250,7 @@ function closeNav() {
           <p   class="close" data-dismiss="modal" aria-label="Close"  >
         <button  class="btaobtn btaobtn-danger">Try Again<i class="far fa-gem ml-1 text-white"></i></button>
         </p>
-        
+
       </div>
     </div>
     <!--/.Content-->
@@ -283,7 +283,7 @@ function closeNav() {
 
        <!--Footer-->
        <div class="modal-footer justify-content-center">
-         
+
          <a type="button" class="btn btn-outline-success waves-effect" data-dismiss="modal">Close</a>
        </div>
      </div>
@@ -291,8 +291,8 @@ function closeNav() {
    </div>
  </div>
  <!-- Central Modal Medium Success-->
- 
- 
+
+
  <!--  Password Model Starts Here -->
  <form method="POST" action="update-password">
      @csrf
@@ -321,7 +321,7 @@ function closeNav() {
 
        <!--Footer-->
        <div class="modal-footer justify-content-center">
-         
+
          <button type="submit" class="btn btn-outline-primary waves-effect" >Update</button>
        </div>
      </div>
