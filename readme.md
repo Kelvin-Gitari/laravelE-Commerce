@@ -35,24 +35,3 @@ The Laravel Ecommerce Project with Complete Source Code is a PHP-based web appli
 5. Add PayuMoney <code>merchant key and salt</code> on <code> config/indipay.php</code> file at line number 30 and 31
 6. Start yor project using <code>php artisan serve</code>
 
-## Generate Sample Data ( Optional)
-1. Remove tables(products, users) from the  database.
-2. Run two files present in this link https://github.com/RahulVijayam/ecommerce/tree/master/public/sql on your database
-3. Finished, Now Check it in your browser using http://127.0.0.1:8000
-
-### Dashboard Details
-- Admin : http://127.0.0.1:8000/admin-dash
-    -   Login Id : rahulvijayanagaram@gmail.com
-    -   Password : 111111111
-- User  : http://127.0.0.1:8000/dashboard 
- 
-### Watch Video
- [![Everything Is AWESOME](https://user-images.githubusercontent.com/36434065/141663839-bb06d652-1be7-4124-b3ba-76e6354bf456.png)](https://www.youtube.com/watch?v=TRr5OQ3YVIE "Watch Video")
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within project, please send an e-mail to me via [contact@rahulvijayam.com](mailto:contact@rahulvijayam.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The project developed using laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
